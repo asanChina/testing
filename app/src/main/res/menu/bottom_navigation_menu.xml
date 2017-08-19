@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/free_space_tab_id"
+        android:orderInCategory="0"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="save"/>
+
+    <item
+        android:id="@+id/view_files_tab_id"
+        android:orderInCategory="1"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="share"/>
+
+</menu>
