@@ -12,6 +12,7 @@ import android.support.annotation.Nullable;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.google.pengjie.second.R;
@@ -21,6 +22,8 @@ import com.google.pengjie.second.R;
  */
 
 public class CustomImageView extends View {
+    private static final String TAG = CustomImageView.class.getSimpleName();
+
     private String text = "";
     private int textColor = Color.BLACK;
     private int textSize = 20;
@@ -127,11 +130,12 @@ public class CustomImageView extends View {
 
         int width = getWidth() - getPaddingLeft() - getPaddingRight();
         int height = getHeight() - getPaddingTop() - getPaddingBottom();
-
         if (width <= 0 || height <= 0) {
             return;
         }
 
+        paint.setTextSize(textSize);
+        paint.getTextBounds(text, 0, text.length(), rect);
         if (width < rect.width()) {
             text = TextUtils.ellipsize(text, new TextPaint(paint), width, TextUtils.TruncateAt.END).toString();
             paint.getTextBounds(text, 0, text.length(), rect);
