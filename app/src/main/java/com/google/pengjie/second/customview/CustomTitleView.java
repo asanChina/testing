@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.annotation.Nullable;
+import android.text.TextPaint;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -71,8 +73,8 @@ public class CustomTitleView extends View {
     }
 
     public void setTextColor(int color) {
-        this.textColor = color;
-        requestLayout();
+        this.textColor = Color.argb(255, color, color, color);
+        invalidate();
     }
 
     public void setTextSize(int size) {
@@ -95,17 +97,19 @@ public class CustomTitleView extends View {
 
         Log.e("here", "here left = " + textBound.left + ", right = " + textBound.right + ", width = " + textBound.width() + ", top = " + textBound.top + ", bottom = " + textBound.bottom + ", height = " + textBound.height());
         if (widthMode == MeasureSpec.EXACTLY) {
+            Log.e("here", "exactly width = " + widthSize);
             measuredWidth = widthSize;
         } else {
             int required = getPaddingLeft() + textBound.width() + getPaddingRight();
-            measuredWidth = required;
+            measuredWidth = Math.min(required, widthSize);
+            Log.e("here", "at most width = " + widthSize);
         }
 
         if (heightMode == MeasureSpec.EXACTLY) {
             measuredHeight = heightSize;
         } else {
             int required = getPaddingTop() + textBound.height() + getPaddingBottom();
-            measuredHeight = required;
+            measuredHeight = Math.min(required, heightSize);
         }
 
         setMeasuredDimension(measuredWidth, measuredHeight);
@@ -115,10 +119,21 @@ public class CustomTitleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        int width = getWidth();
-        int height = getHeight();
+        if (getPaddingBottom() + getPaddingTop() >= getHeight() || getPaddingLeft() + getPaddingRight() >= getWidth()) {
+            return;
+        }
+        Log.e("here", "here in onDraw, width  = " + getWidth());
+
+        int width = getWidth() - getPaddingLeft() - getPaddingRight();
+        int height = getHeight() - getPaddingTop() - getPaddingBottom();
+
         textPaint.setColor(textColor);
 
-        canvas.drawText(text, (width - textBound.width())/2.0f-textBound.left, (height-textBound.height())/2.0f-textBound.top, textPaint);
+        if (width < textBound.width()) {
+            text = TextUtils.ellipsize(text, new TextPaint(textPaint), width, TextUtils.TruncateAt.END).toString();
+            textPaint.getTextBounds(text, 0, text.length(), textBound);
+        }
+
+        canvas.drawText(text, (width - textBound.width())/2.0f-textBound.left + getPaddingLeft(), (height-textBound.height())/2.0f-textBound.top + getPaddingTop(), textPaint);
     }
 }

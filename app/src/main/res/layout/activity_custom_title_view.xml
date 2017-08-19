@@ -9,7 +9,7 @@
         android:id="@+id/custom_title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:titleText="Zhang Pengjie"
+        app:titleText="Zhang Pengjie is a student graduated from Tongji University, and now he is working in Google Inc."
         android:padding="50dp"
         android:background="@color/colorAccent"
         app:titleTextColor="@color/colorPrimary"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/set_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="set text"
         android:textSize="25sp"/>
