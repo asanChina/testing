@@ -17,6 +17,13 @@
             android:text="test coordinator layout"
             android:textSize="25sp"/>
 
+        <Button
+            android:id="@+id/button_test_custom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test custom view"
+            android:textSize="25sp"/>
+
     </LinearLayout>
 
 </ScrollView>

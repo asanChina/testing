@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.pengjie.second.customview.CustomTitleView
+        android:id="@+id/custom_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:titleText="Zhang Pengjie"
+        android:padding="50dp"
+        android:background="@color/colorAccent"
+        app:titleTextColor="@color/colorPrimary"
+        app:titleTextSize="30sp"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/set_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set text"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/set_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set size"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/set_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set color"
+        android:textSize="25sp"/>
+
+</LinearLayout>
