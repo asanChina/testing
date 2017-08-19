@@ -16,7 +16,7 @@ import com.google.pengjie.second.R;
 public class TestCustomViewActivity extends AppCompatActivity {
 
     private Button testCustomTitleView;
-
+    private Button testCustomImageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,11 +24,18 @@ public class TestCustomViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_custom_view);
 
         testCustomTitleView = (Button) findViewById(R.id.test_custom_title_view);
+        testCustomImageView = (Button) findViewById(R.id.test_custom_image_view);
 
         testCustomTitleView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestCustomViewActivity.this, CustomTitleViewActivity.class));
+            }
+        });
+        testCustomImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, CustomImageViewActivity.class));
             }
         });
     }

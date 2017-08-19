@@ -20,6 +20,7 @@
         <activity android:name=".coordinator.bottombar.BottomBarActivity"/>
         <activity android:name=".customview.TestCustomViewActivity"/>
         <activity android:name=".customview.CustomTitleViewActivity"/>
+        <activity android:name=".customview.CustomImageViewActivity"/>
     </application>
 
 </manifest>

@@ -5,13 +5,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/test_custom_title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom title view"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/test_custom_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test custom image view"
             android:textSize="20sp"/>
 
     </LinearLayout>
