@@ -8,10 +8,12 @@ import android.widget.Button;
 
 import com.google.pengjie.second.coordinator.TestCoordinatorLayout;
 import com.google.pengjie.second.customview.TestCustomViewActivity;
+import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button testCoordinatorLayout;
     private Button testCustomView;
+    private Button testFeatureHighlight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         testCoordinatorLayout = (Button) findViewById(R.id.button_test_coordinator_layout);
         testCustomView = (Button) findViewById(R.id.button_test_custom_view);
+        testFeatureHighlight = (Button) findViewById(R.id.button_test_feature_highlight);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, TestCustomViewActivity.class));
+            }
+        });
+        testFeatureHighlight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestFeatureHighlightActivity.class));
             }
         });
     }

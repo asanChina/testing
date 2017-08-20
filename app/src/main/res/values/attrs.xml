@@ -16,4 +16,19 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ProgressView">
+        <attr name="firstColor" format="color"/>
+        <attr name="secondColor" format="color"/>
+        <attr name="innerRadius1" format="dimension"/>
+        <attr name="ringWidth" format="dimension"/>
+        <attr name="speed" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="FeatureHighlightView">
+        <attr name="innerRadius" format="dimension"/>
+        <attr name="outerRadius" format="dimension"/>
+        <attr name="innerBackground" format="color"/>
+        <attr name="outerBackground" format="color"/>
+    </declare-styleable>
+
 </resources>
