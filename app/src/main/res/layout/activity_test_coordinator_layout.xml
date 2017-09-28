@@ -17,6 +17,14 @@
             android:text="test bottom bar"
             android:textSize="24sp"/>
 
+
+        <Button
+            android:id="@+id/test_appbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test app bar"
+            android:textSize="24sp"/>
+
     </LinearLayout>
 
 </ScrollView>

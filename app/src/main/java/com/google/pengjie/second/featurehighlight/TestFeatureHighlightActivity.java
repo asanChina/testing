@@ -27,7 +27,7 @@ public class TestFeatureHighlightActivity extends AppCompatActivity {
         showFeatureHighlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                featureHighlightView.showHighlight(R.id.first);
+                featureHighlightView.showHighlight(R.id.second);
             }
         });
     }

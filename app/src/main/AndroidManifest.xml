@@ -23,6 +23,9 @@
         <activity android:name=".customview.CustomImageViewActivity"/>
         <activity android:name=".customview.ProgressViewActivity"/>
         <activity android:name=".featurehighlight.TestFeatureHighlightActivity"/>
+        <activity android:name=".coordinator.AppBarLayoutActivity"/>
+        <activity android:name=".customview.SimpleViewGroupActivity"/>
+        <activity android:name=".menu.TestMenuActivity" android:theme="@style/FileBrowserScreenTheme"/>
     </application>
 
 </manifest>

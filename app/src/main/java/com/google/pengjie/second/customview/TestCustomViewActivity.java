@@ -18,6 +18,7 @@ public class TestCustomViewActivity extends AppCompatActivity {
     private Button testCustomTitleView;
     private Button testCustomImageView;
     private Button testProgressView;
+    private Button testCustomViewGroup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class TestCustomViewActivity extends AppCompatActivity {
         testCustomTitleView = (Button) findViewById(R.id.test_custom_title_view);
         testCustomImageView = (Button) findViewById(R.id.test_custom_image_view);
         testProgressView = (Button) findViewById(R.id.test_custom_progress_view);
+        testCustomViewGroup = (Button) findViewById(R.id.test_custom_viewgroup);
 
         testCustomTitleView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,12 @@ public class TestCustomViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestCustomViewActivity.this, ProgressViewActivity.class));
+            }
+        });
+        testCustomViewGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, SimpleViewGroupActivity.class));
             }
         });
     }

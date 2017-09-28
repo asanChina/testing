@@ -31,6 +31,13 @@
             android:text="test feature highlight"
             android:textSize="25sp"/>
 
+        <Button
+            android:id="@+id/button_test_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test menu"
+            android:textSize="25sp"/>
+
     </LinearLayout>
 
 </ScrollView>

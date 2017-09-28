@@ -1,11 +1,48 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FileBrowserScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionModeOverlay">true</item>
+        <!--
+          Apply to toolbar/actionbar title, if overflow menu is not specified, this color will also
+          apply to overflow menu text. This color is also default for ActionMode text color.
+         -->
+        <item name="android:textColorPrimary">@android:color/holo_blue_dark</item>
+        <!-- Apply yo toolbar/action bar navigation icon and overflow menu three dots. -->
+        <item name="android:textColorSecondary">@android:color/holo_blue_bright</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Popup Menu styles, our pop up menu will use textColorPrimary as text color
+        if not specified. NOTE: this is not only for PopupMenu, but also for any overflow menu. -->
+        <item name="popupMenuStyle">@style/FileBrowserPopupMenuStyle</item>
+        <!-- Define text appearance for pop up menu, including textColor and textSize, I have to put
+        "android:" namespace before following two attributes, otherwise won't work in some phone.
+        I say weird because start from api 21, we can omit "android:" namespace when we define our
+        theme. NOTE: this is not only for PopupMenu, but also for any overflow menu. -->
+        <item name="android:textAppearanceLargePopupMenu">@style/FileBrowserPopupMenuTextAppearanceLarge</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/FileBrowserPopupMenuTextAppearanceSmall</item>
+    </style>
+
+    <style name="FileBrowserPopupMenuStyle" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@android:color/holo_orange_dark</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
+        <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
+    </style>
+
+    <style name="FileBrowserPopupMenuTextAppearanceLarge" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Large">
+        <item name="android:textColor">@drawable/state</item>
+    </style>
+
+    <style name="FileBrowserPopupMenuTextAppearanceSmall" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">@drawable/state</item>
     </style>
 
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/show_feature_highlight"
@@ -22,16 +22,21 @@
             android:layout_centerInParent="true"/>
 
         <Button
+            android:id="@+id/second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="second"
             android:layout_alignParentBottom="true"/>
 
+        <com.google.pengjie.second.featurehighlight.FeatureHighlightView
+            android:id="@+id/feature_highlight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:outerRadius="400dp"/>
+
     </RelativeLayout>
 
-    <com.google.pengjie.second.featurehighlight.FeatureHighlightView
-        android:id="@+id/feature_highlight"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+
 
 </FrameLayout>

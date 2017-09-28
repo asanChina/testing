@@ -17,6 +17,7 @@ import com.google.pengjie.second.coordinator.bottombar.BottomBarActivity;
 public class TestCoordinatorLayout extends AppCompatActivity {
 
     private Button testBottomBar;
+    private Button testAppBarLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,11 +26,18 @@ public class TestCoordinatorLayout extends AppCompatActivity {
         setContentView(R.layout.activity_test_coordinator_layout);
 
         testBottomBar = (Button) findViewById(R.id.test_bottom_bar);
+        testAppBarLayout = (Button) findViewById(R.id.test_appbar);
 
         testBottomBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestCoordinatorLayout.this, BottomBarActivity.class));
+            }
+        });
+        testAppBarLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCoordinatorLayout.this, AppBarLayoutActivity.class));
             }
         });
     }
