@@ -22,7 +22,7 @@ import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_MOVE;
 import static android.view.MotionEvent.ACTION_UP;
 
-public class FeatureHighlightView extends View {
+public class MyFeatureHighlightView extends View {
     private static final int DEFAULT_INNER_RADIUS = 100;
     private static final int DEFAULT_INNER_BACKGROUND = Color.argb(10, 255, 120, 77);
     private static final int DEFAULT_OUTER_RADIUS = 300;
@@ -42,34 +42,34 @@ public class FeatureHighlightView extends View {
     private ValueAnimator valueAnimator;
     private int currentRadius;
 
-    public FeatureHighlightView(Context context) {
+    public MyFeatureHighlightView(Context context) {
         this(context, null);
     }
 
-    public FeatureHighlightView(Context context, @Nullable AttributeSet attrs) {
+    public MyFeatureHighlightView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FeatureHighlightView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyFeatureHighlightView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
 
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FeatureHighlightView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyFeatureHighlightView);
         try {
             int count = typedArray.getIndexCount();
             for (int i = 0; i < count; ++i) {
                 int attrIndex = typedArray.getIndex(i);
                 switch (attrIndex) {
-                    case R.styleable.FeatureHighlightView_innerRadius:
+                    case R.styleable.MyFeatureHighlightView_innerRadius:
                         innerRadius = typedArray.getDimensionPixelSize(attrIndex, DEFAULT_INNER_RADIUS);
                         break;
-                    case R.styleable.FeatureHighlightView_innerBackground:
+                    case R.styleable.MyFeatureHighlightView_innerBackground:
                         innerBackground = typedArray.getColor(attrIndex, DEFAULT_INNER_BACKGROUND);
                         break;
-                    case R.styleable.FeatureHighlightView_outerRadius:
+                    case R.styleable.MyFeatureHighlightView_outerRadius:
                         outerRadius = typedArray.getDimensionPixelSize(attrIndex, DEFAULT_OUTER_RADIUS);
                         break;
-                    case R.styleable.FeatureHighlightView_outerBackground:
+                    case R.styleable.MyFeatureHighlightView_outerBackground:
                         outerBackground = typedArray.getColor(attrIndex, DEFAULT_OUTER_BACKGROUND);
                         break;
                 }
@@ -169,9 +169,6 @@ public class FeatureHighlightView extends View {
     }
 
     private boolean nearBy(float x, float y) {
-        if ((x-centerX) * (x-centerX) + (y-centerY) * (y-centerY) < innerRadius * innerRadius) {
-            return true;
-        }
-        return false;
+        return (x - centerX) * (x - centerX) + (y - centerY) * (y - centerY) < innerRadius * innerRadius;
     }
 }

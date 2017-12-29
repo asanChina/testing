@@ -14,7 +14,7 @@ import com.google.pengjie.second.R;
 
 public class TestFeatureHighlightActivity extends AppCompatActivity {
     private Button showFeatureHighlight;
-    private FeatureHighlightView featureHighlightView;
+    private MyFeatureHighlightView featureHighlightView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class TestFeatureHighlightActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_feature_highlight);
 
         showFeatureHighlight = (Button) findViewById(R.id.show_feature_highlight);
-        featureHighlightView = (FeatureHighlightView) findViewById(R.id.feature_highlight);
+        featureHighlightView = (MyFeatureHighlightView) findViewById(R.id.feature_highlight);
 
         showFeatureHighlight.setOnClickListener(new View.OnClickListener() {
             @Override

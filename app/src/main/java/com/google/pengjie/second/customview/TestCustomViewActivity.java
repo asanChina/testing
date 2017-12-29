@@ -15,21 +15,35 @@ import com.google.pengjie.second.R;
 
 public class TestCustomViewActivity extends AppCompatActivity {
 
+    private Button testColor;
     private Button testCustomTitleView;
     private Button testCustomImageView;
     private Button testProgressView;
     private Button testCustomViewGroup;
+    private Button testXfermode;
+    private Button testShader;
+    private Button testPathEffect;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_custom_view);
 
+        testColor = (Button) findViewById(R.id.test_color);
         testCustomTitleView = (Button) findViewById(R.id.test_custom_title_view);
         testCustomImageView = (Button) findViewById(R.id.test_custom_image_view);
         testProgressView = (Button) findViewById(R.id.test_custom_progress_view);
         testCustomViewGroup = (Button) findViewById(R.id.test_custom_viewgroup);
+        testXfermode = (Button) findViewById(R.id.test_custom_xfermode);
+        testShader = (Button) findViewById(R.id.test_shader);
+        testPathEffect = (Button) findViewById(R.id.test_path_effect);
 
+        testColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, ColorActivity.class));
+            }
+        });
         testCustomTitleView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +66,24 @@ public class TestCustomViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestCustomViewActivity.this, SimpleViewGroupActivity.class));
+            }
+        });
+        testXfermode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, XfermodeActivity.class));
+            }
+        });
+        testShader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, ShaderActivity.class));
+            }
+        });
+        testPathEffect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, PathEffectActivity.class));
             }
         });
     }

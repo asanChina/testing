@@ -64,9 +64,6 @@ public class CustomTitleViewActivity extends AppCompatActivity {
     }
 
     private boolean valid() {
-        if (TextUtils.isEmpty(editText.getText())) {
-            return false;
-        }
-        return true;
+        return !TextUtils.isEmpty(editText.getText());
     }
 }

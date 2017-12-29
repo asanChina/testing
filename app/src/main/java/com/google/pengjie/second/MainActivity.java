@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.google.pengjie.second.coordinator.TestCoordinatorLayout;
 import com.google.pengjie.second.customview.TestCustomViewActivity;
 import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
+import com.google.pengjie.second.material.TestMaterialFeatureHighlightActivity;
 import com.google.pengjie.second.menu.TestMenuActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button testCustomView;
     private Button testFeatureHighlight;
     private Button testMenu;
+    private Button testMaterialFeatureHighlight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         testCustomView = (Button) findViewById(R.id.button_test_custom_view);
         testFeatureHighlight = (Button) findViewById(R.id.button_test_feature_highlight);
         testMenu = (Button) findViewById(R.id.button_test_menu);
+        testMaterialFeatureHighlight = (Button) findViewById(R.id.button_test_material_feature_highlight);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, TestMenuActivity.class));
+            }
+        });
+        testMaterialFeatureHighlight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestMaterialFeatureHighlightActivity.class));
             }
         });
     }

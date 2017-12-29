@@ -26,6 +26,11 @@
         <activity android:name=".coordinator.AppBarLayoutActivity"/>
         <activity android:name=".customview.SimpleViewGroupActivity"/>
         <activity android:name=".menu.TestMenuActivity" android:theme="@style/FileBrowserScreenTheme"/>
+        <activity android:name=".material.TestMaterialFeatureHighlightActivity"/>
+        <activity android:name=".customview.XfermodeActivity"/>
+        <activity android:name=".customview.ShaderActivity"/>
+        <activity android:name=".customview.PathEffectActivity"/>
+        <activity android:name=".customview.ColorActivity"/>
     </application>
 
 </manifest>

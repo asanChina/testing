@@ -9,6 +9,13 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/test_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test color"
+            android:textSize="20sp"/>
+
+        <Button
             android:id="@+id/test_custom_title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,6 +41,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom viewgroup"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/test_custom_xfermode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test xfermode"
+            android:textSize="20sp"/>
+
+        <Button
+        android:id="@+id/test_shader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test shader"
+        android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/test_path_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test path effect"
             android:textSize="20sp"/>
 
     </LinearLayout>

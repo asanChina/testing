@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="libraries_material_featurehighlight_center_threshold">88dp</dimen>
+    <dimen name="libraries_material_featurehighlight_center_horizontal_offset">20dp</dimen>
+    <dimen name="libraries_material_featurehighlight_help_text_width_tablet">280dp</dimen>
+    <dimen name="libraries_material_featurehighlight_inner_radius">40dp</dimen>
+    <dimen name="libraries_material_featurehighlight_inner_margin">20dp</dimen>
+    <dimen name="libraries_material_featurehighlight_outer_padding">40dp</dimen>
+    <dimen name="libraries_material_featurehighlight_text_body_size">18sp</dimen>
+    <dimen name="libraries_material_featurehighlight_text_header_size">24sp</dimen>
+    <dimen name="libraries_material_featurehighlight_text_horizontal_margin">40dp</dimen>
+</resources>

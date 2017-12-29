@@ -24,7 +24,7 @@
         <attr name="speed" format="integer"/>
     </declare-styleable>
 
-    <declare-styleable name="FeatureHighlightView">
+    <declare-styleable name="MyFeatureHighlightView">
         <attr name="innerRadius" format="dimension"/>
         <attr name="outerRadius" format="dimension"/>
         <attr name="innerBackground" format="color"/>
