@@ -31,6 +31,8 @@
         <activity android:name=".customview.ShaderActivity"/>
         <activity android:name=".customview.PathEffectActivity"/>
         <activity android:name=".customview.ColorActivity"/>
+        <activity android:name=".popupwindow.TestPopupWindowActivity"/>
+        <activity android:name=".dialog.TestDialogActivity"/>
     </application>
 
 </manifest>

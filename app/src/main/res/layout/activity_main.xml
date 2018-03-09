@@ -45,6 +45,21 @@
             android:text="test material feature highlight"
             android:textSize="25sp"/>
 
+
+        <Button
+            android:id="@+id/button_test_popup_window"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test popup window"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test dialog"
+            android:textSize="25sp"/>
+
     </LinearLayout>
 
 </ScrollView>

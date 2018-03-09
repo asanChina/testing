@@ -9,9 +9,11 @@ import android.widget.Button;
 
 import com.google.pengjie.second.coordinator.TestCoordinatorLayout;
 import com.google.pengjie.second.customview.TestCustomViewActivity;
+import com.google.pengjie.second.dialog.TestDialogActivity;
 import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
 import com.google.pengjie.second.material.TestMaterialFeatureHighlightActivity;
 import com.google.pengjie.second.menu.TestMenuActivity;
+import com.google.pengjie.second.popupwindow.TestPopupWindowActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button testCoordinatorLayout;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Button testFeatureHighlight;
     private Button testMenu;
     private Button testMaterialFeatureHighlight;
+    private Button testPopupWindow;
+    private Button testDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         testFeatureHighlight = (Button) findViewById(R.id.button_test_feature_highlight);
         testMenu = (Button) findViewById(R.id.button_test_menu);
         testMaterialFeatureHighlight = (Button) findViewById(R.id.button_test_material_feature_highlight);
+        testPopupWindow = (Button) findViewById(R.id.button_test_popup_window);
+        testDialog = (Button) findViewById(R.id.button_test_dialog);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +65,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, TestMaterialFeatureHighlightActivity.class));
+            }
+        });
+        testPopupWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestPopupWindowActivity.class));
+            }
+        });
+        testDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestDialogActivity.class));
             }
         });
     }
