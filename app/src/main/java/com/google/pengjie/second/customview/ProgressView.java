@@ -11,7 +11,6 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.icu.util.Measure;
 import android.support.annotation.Nullable;
-import android.support.constraint.solver.SolverVariable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;

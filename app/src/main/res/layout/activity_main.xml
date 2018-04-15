@@ -60,6 +60,26 @@
             android:text="test dialog"
             android:textSize="25sp"/>
 
+        <Button
+            android:id="@+id/button_test_media_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test media player"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_handler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test handler"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_navigation_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test navigation drawer"
+            android:textSize="25sp"/>
     </LinearLayout>
 
 </ScrollView>

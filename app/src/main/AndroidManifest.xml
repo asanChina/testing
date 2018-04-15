@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.google.pengjie.second">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,6 +36,13 @@
         <activity android:name=".customview.ColorActivity"/>
         <activity android:name=".popupwindow.TestPopupWindowActivity"/>
         <activity android:name=".dialog.TestDialogActivity"/>
+        <activity android:name=".mediaplayer.TestMediaPlayerActivity"/>
+        <activity android:name=".mediaplayer.simpleaudio.SimpleAudioPlayerActivity"/>
+        <activity android:name=".mediaplayer.exoplayer.ExoPlayerActivity"/>
+        <activity android:name=".handler.TestHandlerActivity"/>
+        <activity android:name=".handler.SelfDefinedHandlerThreadActivity"/>
+        <activity android:name=".navigationdrawer.TestNavigationDrawerActivity"/>
+        <activity android:name=".navigationdrawer.SimpleNavigationDrawerActivity"/>
     </application>
 
 </manifest>
