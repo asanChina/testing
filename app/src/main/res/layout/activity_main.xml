@@ -80,6 +80,32 @@
             android:layout_height="wrap_content"
             android:text="test navigation drawer"
             android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test view pager"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test recycler view"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_fire_intent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test fire intent"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_installed"/>
     </LinearLayout>
 
 </ScrollView>
