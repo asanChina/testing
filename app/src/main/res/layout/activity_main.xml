@@ -102,10 +102,21 @@
             android:text="test fire intent"
             android:textSize="25sp"/>
 
+        <Button
+            android:id="@+id/button_test_transparent_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test transparent activity"
+            android:textSize="25sp"/>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_installed"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>

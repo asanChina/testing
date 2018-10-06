@@ -1,10 +1,10 @@
 package com.google.pengjie.second.material;
 
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Feature Highlights are UI components that provide the user with guidance about
@@ -30,13 +30,17 @@ public class FeatureHighlight {
      * }</pre>
      */
     public static class Builder {
-        @IdRes private int targetViewId = 0;
+        @IdRes
+        private int targetViewId = 0;
         @IdRes private int confiningViewId = android.R.id.content;
-        @Nullable private String headerText = null;
+        @Nullable
+        private String headerText = null;
         @Nullable private String bodyText = null;
-        @ColorInt private int outerColor = 0;
+        @ColorInt
+        private int outerColor = 0;
         @ColorInt private int innerColor = 0;
-        @DrawableRes private int innerDrawableId = 0;
+        @DrawableRes
+        private int innerDrawableId = 0;
 
         private Builder(@IdRes int targetViewId) {
             this.targetViewId = targetViewId;

@@ -8,8 +8,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.IdRes;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -17,6 +15,9 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import com.google.pengjie.second.R;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
 
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_MOVE;

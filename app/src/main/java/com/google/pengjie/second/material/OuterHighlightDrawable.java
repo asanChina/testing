@@ -11,10 +11,11 @@ import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 
 import com.google.pengjie.second.R;
+
+import androidx.annotation.ColorInt;
 
 /**
  * Custom drawable for drawing a circular the outer highlight.
@@ -117,7 +118,7 @@ public class OuterHighlightDrawable extends Drawable {
         TypedValue value = new TypedValue();
         context
                 .getTheme()
-                .resolveAttribute(android.support.v7.appcompat.R.attr.colorAccent, value, true);
+                .resolveAttribute(R.attr.colorAccent, value, true);
         return value.data;
     }
 }

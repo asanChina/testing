@@ -1,18 +1,19 @@
 package com.google.pengjie.second.coordinator.bottombar;
 
 import android.content.Context;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.pengjie.second.R;
 
-import static android.support.v4.view.ViewCompat.SCROLL_AXIS_VERTICAL;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import static androidx.core.view.ViewCompat.SCROLL_AXIS_VERTICAL;
 
 /**
  * Created by pengjie on 8/10/17.
