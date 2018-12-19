@@ -13,6 +13,7 @@ import com.google.pengjie.second.customview.TestCustomViewActivity;
 import com.google.pengjie.second.dialog.TestDialogActivity;
 import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
 import com.google.pengjie.second.fireintent.FireIntentActivity;
+import com.google.pengjie.second.launchmode.TestHandleIntentActivity;
 import com.google.pengjie.second.material.TestMaterialFeatureHighlightActivity;
 import com.google.pengjie.second.menu.TestMenuActivity;
 import com.google.pengjie.second.popupwindow.TestPopupWindowActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Button testRecyclerView;
     private Button testFireIntent;
     private Button testTransparentActivity;
+    private Button testHandleIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         testRecyclerView = findViewById(R.id.button_test_recycler_view);
         testFireIntent = findViewById(R.id.button_test_fire_intent);
         testTransparentActivity = findViewById(R.id.button_test_transparent_activity);
+        testHandleIntent = findViewById(R.id.button_test_handle_intent);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +120,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TransparentActivity.class));
+            }
+        });
+        testHandleIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestHandleIntentActivity.class));
             }
         });
     }

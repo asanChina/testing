@@ -46,6 +46,13 @@
         <activity android:name=".recyclerview.TestRecyclerViewActivity"/>
         <activity android:name=".fireintent.FireIntentActivity"/>
         <activity android:name=".TransparentActivity"/>
+        <activity android:name=".launchmode.TestHandleIntentActivity" android:exported="true">
+            <intent-filter android:label="I am handling">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="plain/text"/>
+            </intent-filter>
+        </activity>
 
 
     </application>
