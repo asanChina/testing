@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.google.pengjie.second.MainActivity">
 
     <LinearLayout
@@ -115,6 +116,27 @@
             android:layout_height="wrap_content"
             android:text="test handle intent"
             android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/button_test_drawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test drawable"
+            android:textSize="25sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_test_material_design_components"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test material design components"
+            android:textSize="25sp"
+            app:icon="@drawable/ic_done_black_24dp"/>
+
+        <Button
+            android:id="@+id/button_test_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test progress bar"/>
 
         <ImageView
             android:layout_width="wrap_content"

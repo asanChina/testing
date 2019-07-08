@@ -1,14 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#ff0000</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FileBrowserScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="SettingsTheme" parent="AppTheme">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <style name="FileBrowserScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="windowActionModeOverlay">true</item>
         <!--
           Apply to toolbar/actionbar title, if overflow menu is not specified, this color will also
@@ -45,7 +49,7 @@
         <item name="android:textColor">@drawable/state</item>
     </style>
 
-    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.AppCompat.Translucent" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>

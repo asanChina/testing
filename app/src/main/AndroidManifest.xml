@@ -53,7 +53,10 @@
                 <data android:mimeType="plain/text"/>
             </intent-filter>
         </activity>
-
+        <activity android:name=".drawable.TestDrawableActivity"/>
+        <activity android:name=".materialdesign.TestMaterialDesignActivity"/>
+        <activity android:name=".settings.SettingsActivity"/>
+        <activity android:name=".progressbar.TestProgressBarActivity"/>
 
     </application>
 
