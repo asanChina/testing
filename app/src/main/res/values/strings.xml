@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Second</string>
+    <string name="language_button">English language button</string>
+    <string name="change_to_english">English change_to_english</string>
+    <string name="change_to_chinese">English change_to_chinese</string>
+    <string name="change_to_french">English change_to_french</string>
+    <string name="test_language">English test language</string>
 </resources>

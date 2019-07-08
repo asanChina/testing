@@ -1,0 +1,7 @@
+<resources>
+    <string name="language_button">French language button</string>
+    <string name="change_to_english">French change_to_english</string>
+    <string name="change_to_chinese">French change_to_chinese</string>
+    <string name="change_to_french">French change_to_french</string>
+    <string name="test_language">French test language</string>
+</resources>
