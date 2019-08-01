@@ -15,6 +15,7 @@ import com.google.pengjie.second.dialog.TestDialogActivity;
 import com.google.pengjie.second.drawable.TestDrawableActivity;
 import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
 import com.google.pengjie.second.fireintent.FireIntentActivity;
+import com.google.pengjie.second.fragment.TestFragmentActivity;
 import com.google.pengjie.second.language.LanguageActivity;
 import com.google.pengjie.second.launchmode.TestHandleIntentActivity;
 import com.google.pengjie.second.material.TestMaterialFeatureHighlightActivity;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private Button testMaterialDesignComponents;
     private Button testProgressBar;
     private Button testLanguage;
+    private Button testFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         testMaterialDesignComponents = findViewById(R.id.button_test_material_design_components);
         testProgressBar = findViewById(R.id.button_test_progress_bar);
         testLanguage = findViewById(R.id.button_test_language);
+        testFragment = findViewById(R.id.button_test_fragment);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,7 +169,14 @@ public class MainActivity extends AppCompatActivity {
         testLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.e("here", "here in MainActivity.onCreate, " + Thread.currentThread().getName());
                 startActivity(new Intent(MainActivity.this, LanguageActivity.class));
+            }
+        });
+        testFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestFragmentActivity.class));
             }
         });
         //getDelegate().applyDayNight();
