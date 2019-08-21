@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -60,6 +61,10 @@
         <activity android:name=".progressbar.TestProgressBarActivity"/>
         <activity android:name=".language.LanguageActivity"/>
         <activity android:name=".fragment.TestFragmentActivity"/>
+        <activity android:name=".design.TestDesignActivity" android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".customview.TabIndicatorActivity"/>
+        <activity android:name=".customview.ViewPagerIndicatorActivity"/>
+        <activity android:name=".customview.StupidViewActivity" android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
 
     </application>
 

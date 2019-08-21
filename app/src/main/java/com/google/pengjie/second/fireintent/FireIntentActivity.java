@@ -17,6 +17,8 @@ import android.widget.ListView;
 
 import com.google.pengjie.second.R;
 
+import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,8 @@ public class FireIntentActivity extends AppCompatActivity {
     private List<String> uriList = new ArrayList<>();
     private boolean excuted = false;
 
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +46,7 @@ public class FireIntentActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.e(TAG, "here in position = " + position);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(uriList.get(position)));
+                intent.setDataAndType(Uri.parse("https://www.youtube.com/watch?v=GBX4Di4XTag"), "video/*");
                 startActivity(intent);
             }
         });

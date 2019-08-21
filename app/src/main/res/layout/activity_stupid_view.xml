@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.pengjie.second.customview.StupidViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.pengjie.second.customview.ShellTextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="help me" />
+
+</com.google.pengjie.second.customview.StupidViewGroup>

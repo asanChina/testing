@@ -13,56 +13,78 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test color"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_custom_title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom title view"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_custom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom image view"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_custom_progress_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom progress view"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_custom_viewgroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test custom viewgroup"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_custom_xfermode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test xfermode"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
-        android:id="@+id/test_shader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test shader"
-        android:textSize="20sp"/>
+            android:id="@+id/test_shader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test shader"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/test_path_effect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test path effect"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/test_tab_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test tab indicator"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/test_view_pager_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test view pager indicator"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/test_stupid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test stupid view"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </ScrollView>

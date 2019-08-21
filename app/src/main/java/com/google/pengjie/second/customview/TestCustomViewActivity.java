@@ -24,6 +24,9 @@ public class TestCustomViewActivity extends AppCompatActivity {
     private Button testXfermode;
     private Button testShader;
     private Button testPathEffect;
+    private Button testTabIndicator;
+    private Button testViewPagerIndicator;
+    private Button testStupidView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +41,9 @@ public class TestCustomViewActivity extends AppCompatActivity {
         testXfermode = (Button) findViewById(R.id.test_custom_xfermode);
         testShader = (Button) findViewById(R.id.test_shader);
         testPathEffect = (Button) findViewById(R.id.test_path_effect);
+        testTabIndicator = findViewById(R.id.test_tab_indicator);
+        testViewPagerIndicator = findViewById(R.id.test_view_pager_indicator);
+        testStupidView = findViewById(R.id.test_stupid_view);
 
         testColor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +91,24 @@ public class TestCustomViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TestCustomViewActivity.this, PathEffectActivity.class));
+            }
+        });
+        testTabIndicator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, TabIndicatorActivity.class));
+            }
+        });
+        testViewPagerIndicator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, ViewPagerIndicatorActivity.class));
+            }
+        });
+        testStupidView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TestCustomViewActivity.this, StupidViewActivity.class));
             }
         });
     }

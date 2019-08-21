@@ -2,6 +2,7 @@ package com.google.pengjie.second;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.Button;
 
 import com.google.pengjie.second.coordinator.TestCoordinatorLayout;
 import com.google.pengjie.second.customview.TestCustomViewActivity;
+import com.google.pengjie.second.design.TestDesignActivity;
 import com.google.pengjie.second.dialog.TestDialogActivity;
 import com.google.pengjie.second.drawable.TestDrawableActivity;
 import com.google.pengjie.second.featurehighlight.TestFeatureHighlightActivity;
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private Button testProgressBar;
     private Button testLanguage;
     private Button testFragment;
+    private Button testDesign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         testProgressBar = findViewById(R.id.button_test_progress_bar);
         testLanguage = findViewById(R.id.button_test_language);
         testFragment = findViewById(R.id.button_test_fragment);
+        testDesign = findViewById(R.id.button_test_design);
 
         testCoordinatorLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +174,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.e("here", "here in MainActivity.onCreate, " + Thread.currentThread().getName());
-                startActivity(new Intent(MainActivity.this, LanguageActivity.class));
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setDataAndType(Uri.parse("https://youtu.be/UH8K9brxkUg"), "video/*");
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e("here","here in MainActivity.onCreate, ", e);
+                }
             }
         });
         testFragment.setOnClickListener(new View.OnClickListener() {
@@ -180,6 +190,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //getDelegate().applyDayNight();
+        testDesign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestDesignActivity.class));
+            }
+        });
     }
 
     @Override
